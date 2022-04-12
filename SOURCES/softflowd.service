@@ -1,0 +1,20 @@
+[Unit]
+Description=Network traffic analyser capable of Cisco NetFlow data export
+Documentation=https://github.com/irino/softflowd/wiki/softflowd
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/softflowd
+PermissionsStartOnly=True
+RuntimeDirectory=softflowd
+RuntimeDirectoryMode=0755
+Type=forking
+PIDFile=/run/softflowd/softflowd
+ExecStart=/usr/sbin/softflowd ...
+ExecReload=/bin/kill --signal HUP $MAINPID
+KillMode=process
+KillSignal=SIGINT
+
+[Install]
+Alias=softflowd.service
+WantedBy=multi-user.target
+
