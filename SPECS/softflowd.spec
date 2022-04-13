@@ -41,12 +41,14 @@ rm -rf $RPM_BUILD_ROOT
 %{__install} -m 0600 %{SOURCE2} %{buildroot}%{_sysconfdir}/sysconfig/%{name}
 
 %files
-#%defattr(-,root,root)
+%license LICENSE
+%doc LICENSE AUTHORS README NEWS ChangeLog TODO
+%defattr(-, root, root,-)
+%{_sbindir}/%{name}
 #/usr/sbin/*
 #/usr/share/man/*
-#%attr(0755,root,root) /etc/rc.d/init.d/softflowd
-#%config(noreplace) %attr(0644,root,root) /etc/sysconfig/softflowd
-#%doc ChangeLog README TODO
+%{_unitdir}/%{name}.service
+%{_sysconfdir}/sysconfig/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
