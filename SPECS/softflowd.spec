@@ -31,6 +31,8 @@ versions 1, 5 or 9 of the NetFlow protocol.
 %setup -n softflowd-softflowd-1.0.0
 
 %build
+aclocal
+autoheader
 automake --add-missing
 autoconf
 autoreconf
