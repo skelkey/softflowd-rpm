@@ -53,8 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-, root, root,-)
 %{_bindir}/softflowd
 %{_bindir}/softflowctl
-#/usr/sbin/*
-#/usr/share/man/*
+%{_mandir}/man8/softflowctl.8.gz
+%{_mandir}/man8/softflowd.8.gz
 %{_unitdir}/%{name}.service
 %{_sysconfdir}/sysconfig/%{name}
 
