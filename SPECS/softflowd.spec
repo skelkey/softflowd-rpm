@@ -51,7 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 %license LICENSE
 %doc LICENSE AUTHORS README NEWS ChangeLog TODO
 %defattr(-, root, root,-)
-%{_sbindir}/%{name}
+%{_bindir}/softflowd
+%{_bindir}/softflowctl
 #/usr/sbin/*
 #/usr/share/man/*
 %{_unitdir}/%{name}.service
