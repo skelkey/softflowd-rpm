@@ -29,6 +29,8 @@ versions 1, 5 or 9 of the NetFlow protocol.
 %setup -n softflowd-softflowd-1.0.0
 
 %build
+autoconf
+autoreconf
 %configure
 make %{?_smp_mflags}
 
