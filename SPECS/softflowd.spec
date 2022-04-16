@@ -15,6 +15,7 @@ BuildArch:     x86_64
 BuildRequires: gcc >= 8.3
 BuildRequires: make >= 4.2.1
 BuildRequires: autoconf >= 2.69
+BuildRequires: automake >= 1.15.1
 
 
 %description
