@@ -26,7 +26,7 @@ NetFlow traffic account system.  softflowd supports data export using
 versions 1, 5 or 9 of the NetFlow protocol.
 
 %prep
-%setup -q
+%setup -n softflowd-softflowd-1.0.0
 
 %build
 %configure
