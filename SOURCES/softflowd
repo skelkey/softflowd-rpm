@@ -2,6 +2,6 @@
 #
 # Options passed to the softflowd program
 # Default - not very useful
-#SOFTFLOW_OPTS="-i eth0"
+SOFTFLOW_OPTS="-i eth0"
 # Example NetFlow v5 export from traffic on eth1
 #SOFTFLOW_OPTS="-v 5 -i eth1 -n hostname:2055"
